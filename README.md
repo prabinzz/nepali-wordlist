@@ -9,7 +9,7 @@ Nepali wordlist for wpa2 cracking. Includes password with length of 8 character 
  * __wlist.py:__
   `This is a wordlist manager script which can strip down larg wordlist to a smaller one according to your need.`
   
-  * *__Install:__*
-   1. Copy this script to your path.
-   2. Make it execuitable by `chmod +x wlist.py`
-   3. Execuite command by wlist.py from terminal.
+     *__Install:__*
+      1. Copy this script to your path.
+      2. Make it execuitable by `chmod +x wlist.py`
+      3. Execuite command by wlist.py from terminal.
