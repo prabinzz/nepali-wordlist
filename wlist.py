@@ -233,4 +233,4 @@ if __name__ == '__main__':
 	try:
 		wlist_filter(args,args.wordlist)
 	except KeyboardInterrupt:
-		print()
+		print("\n[+] KeyboardInterrupt")
