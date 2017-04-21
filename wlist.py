@@ -152,7 +152,7 @@ def wlist_filter(args,wordlist,word=None,newline='\n'):
 	if not args.silent:
 		output_f("Initializing "+wordlist,"progress")
 	if args.verbose and args.word != None:
-		output_f("Search words '"+args.word+"' and processing.","info")
+		output_f("Search words:"+args.word,"info")
 
 	# open wordlist file and store individual lines in words variable.
 	file=open(wordlist,"r",errors="ignore",encoding="utf-8")
