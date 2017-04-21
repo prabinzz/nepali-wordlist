@@ -7,7 +7,7 @@ Nepali wordlist for wpa2 cracking. Includes password with length of 8 character 
  * __nepali-name.txt:__
   `8000+ nepali names which might be helpful to create your own wordlist or in some other projects.`
  * __wlist.py:__
-  `This is a wordlist manager script which can strip down larg wordlist to a smaller one according to your need.`
+  `This is a wordlist manager script which can strip down larg wordlist to a smaller one according to your need. Codes are all messed up but it works perfectly.. :)`
   
      *__Install:__*
       1. Copy this script to your path.
