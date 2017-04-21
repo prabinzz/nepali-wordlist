@@ -3,7 +3,7 @@ Nepali wordlist for wpa2 cracking. Includes password with length of 8 character 
 
 ## Files 
  * __nepali-name-suffix-8+.txt.gz:__
-  `Nepali names passwords with numbered suffix. Contains 80,00,000 words with up to 3 number suffixa.`
+  `Nepali names passwords with numbered suffix. Contains 80,00,000 words with up to 3 number suffixa. Level 9 compression used to compress. Original size is  around 50 MB. `
  * __nepali-name.txt:__
   `8000+ nepali names which might be helpful to create your own wordlist or in some other projects.`
  * __wlist.py:__
