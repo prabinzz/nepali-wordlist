@@ -1,15 +1,40 @@
-# nepali-wordlist
-Nepali wordlist for wpa2 cracking. Includes password with length of 8 character or more and mostly contains nepali words including other common words.
 
-## Files 
- * __nepali-name-suffix-8+.txt.gz:__
-  `Nepali names passwords with numbered suffix. Contains 80,00,000 words with up to 3 number suffixa.`
- * __nepali-name.txt:__
-  `8000+ nepali names which might be helpful to create your own wordlist or in some other projects.`
- * __wlist.py:__
-  `This is a wordlist manager script which can strip down larg wordlist to a smaller one according to your need. Codes are all messed up  wtihout proper documentation but it works perfectly.. :)`
-  
-     *__Install:__*
-      1. Copy this script to your path.
-      2. Make it execuitable by `chmod +x wlist.py`
-      3. Execuite command by wlist.py from terminal.
+# Nepali Wordlist for WPA2 Cracking
+
+This repository provides a Nepali wordlist specifically designed for WPA2 password cracking. The wordlist primarily contains Nepali words and other commonly used passwords with a minimum length of 8 characters.
+
+---
+
+## Files Included
+
+### 1. **nepali-name-suffix-8+.txt.gz**  
+   - A comprehensive wordlist of **8,000,000 passwords**.  
+   - Contains Nepali names with numeric suffixes (up to three digits).  
+
+### 2. **nepali-name.txt**  
+   - A smaller collection of **8,000+ Nepali names**.  
+   - Useful for creating custom wordlists or for other projects.
+
+### 3. **wlist.py**  
+   - A script for managing wordlists.  
+   - Allows you to trim large wordlists into smaller, customized lists based on your requirements.  
+   - **Note:** The code may not be fully documented but functions reliably.  
+
+---
+
+## Installation of `wlist.py`
+
+1. Copy the script to a directory included in your system's PATH.  
+2. Make the script executable:  
+   ```bash
+   chmod +x wlist.py
+   ```
+3. Run the script directly from your terminal:  
+   ```bash
+   wlist.py
+   ```
+
+---
+
+### Note  
+The wordlists and tools are provided for educational purposes and ethical research only. Ensure compliance with local laws and regulations before use.
