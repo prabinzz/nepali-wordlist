@@ -1,0 +1,68 @@
+name: Release Workflow
+
+on:
+  push:
+    tags:
+      - "v*.*.*" # Triggers on pushes to tags like v1.0.0, v1.0.1, etc.
+
+jobs:
+  release:
+    name: Create GitHub Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # Optional: Run tests before releasing to ensure quality
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.x" # Use a general Python version for release testing
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      - name: Run tests
+        run: PYTHONPATH=. pytest
+
+      - name: Create release archive
+        run: |
+          # Create a directory for the release contents
+          mkdir release-package
+          # Copy essential files
+          cp wlist.py release-package/
+          cp nepali-names.txt release-package/
+          cp README.md release-package/
+          cp LICENSE release-package/
+          cp Makefile release-package/
+          cp requirements.txt release-package/
+          # Zip the contents
+          zip -r "wordlist-toolkit-${{ github.ref_name }}.zip" release-package/
+
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: Release ${{ github.ref }}
+          body: |
+            # Release Notes for ${{ github.ref }}
+
+            This release provides the latest version of the Wordlist Toolkit.
+
+            ## Assets:
+            - `wordlist-toolkit-${{ github.ref_name }}.zip`: A complete archive of the project files.
+          draft: false
+          prerelease: false
+
+      - name: Upload Release Archive
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./wordlist-toolkit-${{ github.ref_name }}.zip
+          asset_name: wordlist-toolkit-${{ github.ref_name }}.zip
+          asset_content_type: application/zip
