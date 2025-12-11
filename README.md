@@ -1,16 +1,7 @@
 # Wordlist Toolkit
 
-[![CI](https://github.com/prabinparajuli/nepali-wordlist/actions/workflows/python-app.yml/badge.svg)](https://github.com/prabinparajuli/nepali-wordlist/actions/workflows/python-app.yml)
-
 A versatile command-line tool for generating and manipulating wordlists. Built with performance and flexibility in mind, this tool makes it easy to create custom wordlists from a base set of names or filter existing lists to meet specific criteria.
 
-## Key Features
-
--   **Advanced Wordlist Generation:** Create complex wordlists by combining base names with numbers, years, and common suffixes.
--   **Powerful Filtering:** Systematically reduce large wordlists based on length, content, character patterns, and more.
--   **Memory Efficient:** Processes large files iteratively, ensuring low and stable memory usage even with massive wordlists.
--   **Flexible Output:** Print to standard output or save results to a file.
--   **Simple & Fast:** A lightweight, dependency-free Python script that's easy to use and modify.
 
 ## Installation
 
@@ -28,7 +19,11 @@ A versatile command-line tool for generating and manipulating wordlists. Built w
     ```bash
     pip install -r requirements.txt
     ```
-
+4. **Generate Wordlist**
+    ```bash
+    python3 wlist.py generate --capitalize --add-numbers 1-9999 \
+        --add-years --add-common-suffixes --out all_combos.txt 
+    ```
 ## Usage
 
 The script provides two main commands: `generate` and `filter`.
